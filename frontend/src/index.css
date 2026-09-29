@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Imagen de fondo de mascotas con un filtro oscuro encima para mantener la legibilidad */
+  background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.9)), url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Hace que el fondo se quede quieto al hacer scroll */
+  color: #e0e0e0;
+}
+
+/* Efecto hover moderno para todos los botones */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
