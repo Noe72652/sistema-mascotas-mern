@@ -10,7 +10,7 @@ const Dashboard = () => {
         const cargarEstadisticas = async () => {
             try {
                 // Obtenemos las mascotas reales de la base de datos
-                const respuesta = await axios.get('http://localhost:3000/api/mascotas');
+                const respuesta = await axios.get('https://api-mascotas-0yvf.onrender.com/api/mascotas');
                 const mascotas = respuesta.data;
 
                 // Contar cuántas mascotas hay por especie

@@ -12,7 +12,7 @@ const Login = () => {
 
     const registrarUsuarioPrueba = async () => {
         try {
-            await axios.post('http://localhost:3000/api/auth/registrar', {
+            await axios.post('https://api-mascotas-0yvf.onrender.com/api/auth/registrar', {
                 email: 'admin@mascotas.com',
                 password: 'secreta123',
                 fuerzaPassword: 'fuerte'
@@ -39,7 +39,7 @@ const Login = () => {
         }
 
         try {
-            const respuesta = await axios.post('http://localhost:3000/api/auth/login', {
+            const respuesta = await axios.post('https://api-mascotas-0yvf.onrender.com/api/auth/login', {
                 email,
                 password
             });

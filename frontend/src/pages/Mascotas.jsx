@@ -13,7 +13,7 @@ const Mascotas = () => {
     // Función para obtener las mascotas desde la Base de Datos
     const cargarMascotas = async () => {
         try {
-            const respuesta = await axios.get('http://localhost:3000/api/mascotas');
+            const respuesta = await axios.get('https://api-mascotas-0yvf.onrender.com/api/mascotas');
             setMascotas(respuesta.data);
         } catch (error) {
             console.error('Error al cargar mascotas', error);
@@ -34,7 +34,7 @@ const Mascotas = () => {
         }
 
         try {
-            await axios.post('http://localhost:3000/api/mascotas', {
+            await axios.post('https://api-mascotas-0yvf.onrender.com/api/mascotas', {
                 nombre,
                 especie,
                 edad: Number(edad)
@@ -55,7 +55,7 @@ const Mascotas = () => {
     const eliminarMascota = async (id) => {
         if (window.confirm('¿Estás seguro de que deseas eliminar (lógicamente) esta mascota?')) {
             try {
-                await axios.put(`http://localhost:3000/api/mascotas/eliminar/${id}`);
+                await axios.put(`https://api-mascotas-0yvf.onrender.com/api/mascotas/eliminar/${id}`);
                 alert('Mascota eliminada lógicamente');
                 cargarMascotas(); // Recargar la tabla para que desaparezca de las "Activas"
             } catch (error) {
